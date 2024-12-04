@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:test_hardware_capabilities/location.dart';
 import 'package:test_hardware_capabilities/camera.dart';
+import 'package:test_hardware_capabilities/biometrics.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,6 +41,15 @@ class ExampleSelector extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ImagePickerExample()),
+              );
+            },
+          ),
+          ListTile(
+            title: Text('Biometrics'),
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => BiometricAuthExample()),
               );
             },
           ),
